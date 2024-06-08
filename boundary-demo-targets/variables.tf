@@ -43,3 +43,14 @@ variable "okta_user_password" {
   type        = string
   description = "The password that will be set on the PIE, DEV, and IT Okta user accounts"
 }
+
+variable "ssh_public_key" {
+  description = "The SSH public key to use for authentication"
+  type        = string
+}
+
+variable "ssh_private_key" {
+  description = "The SSH private key to use for authentication"
+  type        = string
+  sensitive   = true
+}
