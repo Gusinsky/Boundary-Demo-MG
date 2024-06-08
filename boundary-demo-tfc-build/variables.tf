@@ -62,3 +62,13 @@ variable "HCP_CLIENT_SECRET" {
   type        = string
   description = "The HCP Client Secret to authenticate the HCP provider"
 }
+
+variable "AZURE_CLIENT_ID" {
+  type        = string
+  description = "Azure API creds, clientID."
+}
+
+variable "AZURE_CLIENT_SECRET" {
+  type        = string
+  description = "Azure API creds, secret"
+}

@@ -140,6 +140,23 @@ resource "tfe_variable" "HCP_CLIENT_SECRET" {
   variable_set_id = tfe_variable_set.boundary_demo_varset.id
 }
 
+resource "tfe_variable" "AZURE_CLIENT_ID" {
+  key             = "AZURE_CLIENT_ID"
+  value           = var.AZURE_CLIENT_ID
+  category        = "env"
+  description = "The azure Client ID."
+  variable_set_id = tfe_variable_set.boundary_demo_varset.id
+}
+
+resource "tfe_variable" "AZURE_CLIENT_SECRET" {
+  key             = "AZURE_CLIENT_SECRET"
+  value           = var.AZURE_CLIENT_SECRET
+  category        = "env"
+  description = "The azure Client Secret."
+  sensitive = true
+  variable_set_id = tfe_variable_set.boundary_demo_varset.id
+}
+
 #Attach the variable set to all workspaces in the project
 resource "tfe_project_variable_set" "boundary_demo_varset" {
     variable_set_id = tfe_variable_set.boundary_demo_varset.id
