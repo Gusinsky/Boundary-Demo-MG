@@ -6,6 +6,9 @@
 
 # Boundary Demo
 
+## Additions from MG
+Added multi-hop workers in Azure.
+
 ## Demo Environment
 This terraform code builds an HCP Boundary enviroment that inclues connectivity to HCP Vault for credential brokering and injection, Okta integration for OIDC authentication and managed groups, and a number of AWS resources that are used as workers and Boundary targets.  
 
